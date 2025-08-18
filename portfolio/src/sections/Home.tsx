@@ -3,11 +3,10 @@ import "../assets/CSS/home.css";
 
 export default function Home() {
   const paragraphText = `Intro text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`;
-  const Name = 'Your Name Here';
+  const Name = 'Jonathan Sena';
   const [lines, setLines] = useState<string[][]>([]);
 
   useEffect(() => {
-    // Dividir o texto em palavras para animação
     const words = paragraphText.split(" ");
     const containerWidth = 60; // ajusta baseado no seu max-width
     const tempLines: string[][] = [];
