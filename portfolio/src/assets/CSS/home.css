@@ -1,8 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
 
+/* Container principal */
 .home {
-    margin-top: 10vh;
-    margin-left: 5vw;
+  margin-top: 10vh;
+  margin-left: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Divide texto e imagem lado a lado */
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Texto ocupa metade */
+.home-text {
+  flex: 1;
+}
+
+/* Imagem */
+.home-image img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 /* Títulos e parágrafos */
