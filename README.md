@@ -13,7 +13,7 @@ O design será inspirado em um **tema escuro**, utilizando as cores **roxo**, **
 - **react** e **react-dom** → Núcleo do React
 - **typescript** → Tipagem para JavaScript
 - **react-icons** → Ícones prontos para uso
-- **react-router-dom** → Implementação de roteamento em aplicações web
+- **react-scroll** → Implementação de roteamento em aplicações web
 
 ## 🛠 Frameworks e Bibliotecas
 - **React Icons** para ícones de redes sociais e tecnologias
@@ -48,7 +48,7 @@ cd Portfolio_Lab_Software
 2. **Instalar as dependências**
 
 ```bash
-npm install react-router-dom
+npm install react-scroll
 npm install react-icons
 ```
 
