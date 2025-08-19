@@ -2,6 +2,7 @@
 
 /* Container principal */
 .home {
+    margin-top: 50px;
   margin-right: 10vw;
   display: flex;
   align-items: center;
