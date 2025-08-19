@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap");
 
 /* Container principal */
 .home {
@@ -19,148 +19,159 @@
 
 /* Texto ocupa metade */
 .home-text {
-  flex: 1;
+  width: 80%;
 }
 
 /* Imagem */
 .home-image img {
-    margin-left: 50px;
+  margin-left: 50px;
   width: 500px;
   height: 500px;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Títulos e parágrafos */
-.home-h1, .home-description p {
-    font-family: 'Raleway', sans-serif;
-}
-
-/* ===================== */
-/* H1 com degradê e digitação */
-.home-h1 {
-    font-size: 4rem;
-    margin-bottom: 2rem;
-    background: linear-gradient(90deg, #ffffff 0%, #999999 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-    animation: typingH1 2s steps(20, end) forwards;
-    position: relative;
-}
-.home-h1::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 1em;
-    border-right: 0.15em solid white;
-    animation: blink 2s step-end infinite;
-}
-
-@keyframes typingH1 {
-    from { width: 0; }
-    to { width: 14ch; }
-}
-
-@keyframes blinkH1 {
-    0%, 50%, 100% { opacity: 1; }
-    25%, 75% { opacity: 0; }
-}
-
-/* ===================== */
-/* Parágrafo com múltiplas linhas */
+.home-h1,
 .home-description p {
-    font-size: 1.2rem;
-    margin-top: 2rem;
-    max-width: 50ch;
-    line-height: 1.5;
+  font-family: "Raleway", sans-serif;
 }
 
-/* Cada linha do parágrafo */
+/* ===================== */
+/* H1 apenas com degradê + fade-in (sem digitação) */
+.home-h1 {
+  font-size: 3rem;
+  text-align: left;
+  text-wrap: balance;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #ffffff 0%, #999999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* reset do efeito antigo */
+  width: auto;
+  overflow: visible;
+  white-space: pre-line; /* respeita \n no título, se usar */
+  display: inline-block;
+
+  /* animação suave de entrada */
+  opacity: 0;
+  transform: translateY(8px);
+  animation: h1Fade 600ms ease-out forwards;
+}
+
+/* remove o cursor que vinha do efeito antigo */
+.home-h1::after {
+  content: none;
+}
+
+@keyframes h1Fade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================== */
+/* Parágrafo com múltiplas linhas digitando */
+.home-description p {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  max-width: 50ch;
+  line-height: 1.5;
+}
+
 .line {
-    color: #9C9C9C;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-    animation: 
-        typing 2s steps(40, end) forwards,
-        hideCursor 0.5s forwards;
-    animation-delay: calc(2s + var(--i) * 2.1s),
-                     calc(4s + var(--i) * 2.1s);
+  color: #9c9c9c;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 2s steps(40, end) forwards, hideCursor 0.5s forwards;
+  animation-delay: calc(0.7s + var(--i) * 2.1s), calc(2.7s + var(--i) * 2.1s);
 }
 
-/* Última linha com cursor piscando */
 .last-line {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .last-line::after {
-    content: '';
-    position: absolute;
-    right: -0.15em;
-    top: 0;
-    height: 1.2em;
-    border-right: 0.15em solid white;
-    animation: blink 0.75s step-end infinite;
+  content: "";
+  position: absolute;
+  right: -0.15em;
+  top: 0;
+  height: 1.2em;
+  border-right: 0.15em solid white;
+  animation: blink 0.75s step-end infinite;
 }
 
 /* Keyframes */
 @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes hideCursor {
-    from { border-right-color: white; }
-    to { border-right-color: transparent; }
+  from {
+    border-right-color: white;
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
 @keyframes blink {
-    0%, 50%, 100% { opacity: 1; }
-    25%, 75% { opacity: 0; }
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
 
 /* Botão */
 .home-button {
-    background-color: #4C2977;
-    border: none;
-    color: white;
-    padding: 12px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    width: 300px;
-    font-size: 20px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+  background-color: #4c297700;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 300px;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.4s;
+  margin-top: 5px;
 
-    /* Slide-in */
-    transform: translateX(-100%);
-    opacity: 0;
-    animation: slideInLeft 1s ease-out forwards;
-    animation-delay: 7s; /* aparece depois do H1 e parágrafo */
+  /* Slide-in */
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: slideInLeft 1s ease-out forwards;
+  animation-delay: 8s; 
 }
 
 .home-button:hover {
-    background-color: #2b1842;
+  background-color: #2b1842;
 }
 
 @keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

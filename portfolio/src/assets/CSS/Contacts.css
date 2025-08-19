@@ -1,0 +1,91 @@
+.contacts {
+  text-align: center;
+  padding: 0px 20px;
+  color: white;
+  width: 100%;
+  min-height: 70vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacts h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.contacts-grid {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background: #3a0d70;
+  padding: 50px 30px;
+  border-radius: 16px;
+  width: 320px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease forwards;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 20px rgba(170, 100, 255, 0.7);
+}
+
+.contact-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.linkedin { color: #0e76a8; }
+.github { color: #333; }
+.gmail { color: #ea4335; }
+
+.contact-card p {
+  margin: 15px 0;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  font-family: monospace;
+}
+
+.contact-btn {
+  background: #4C2977;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.contact-btn:hover {
+  background: #2b1842;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contacts-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Animação inicial */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

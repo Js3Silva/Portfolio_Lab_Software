@@ -1,17 +1,49 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-    background-image: url('./assets/backgroud.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 2rem;
+  background-image: url("./assets/backgroud.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 3rem;
+  text-align: left;
+  text-wrap: balance;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #ffffff 0%, #999999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 0;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
 }

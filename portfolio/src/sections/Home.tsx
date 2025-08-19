@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import "../assets/CSS/Home.css";
+import { GoChevronRight } from "react-icons/go";
 import img from "../assets/astronauta.png";
 
 export default function Home() {
-  const paragraphText = `Intro text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`;
-  const Name = 'Jonathan Sena';
+  const paragraphText = `Bem-vindo ao meu universo!
+Sou apaixonado por tecnologia, inovação e pelo impacto que o código pode gerar no mundo real. 
+Minha missão é transformar ideias em soluções criativas, desenvolver projetos que conectam pessoas, 
+otimizam processos e impulsionam novas possibilidades.`;
+  const Name = "Olá! Eu sou o Jonathan \ne estou Graduando em Engenharia de Software";
   const [lines, setLines] = useState<string[][]>([]);
 
   useEffect(() => {
@@ -32,7 +36,9 @@ export default function Home() {
     <div className="home">
       <div className="home-content">
         <div className="home-text">
-          <h1 className="home-h1">{Name}</h1>
+          <h1 className="home-h1" style={{ whiteSpace: "pre-line" }}>
+            {Name}
+          </h1>
           <section className="home-description">
             <p>
               {lines.map((line, index) => (
@@ -47,7 +53,7 @@ export default function Home() {
             </p>
           </section>
           <section className="home-button-section">
-            <button className="home-button">Continuar</button>
+            <button className="home-button">Saber mais <GoChevronRight /></button>
           </section>
         </div>
 

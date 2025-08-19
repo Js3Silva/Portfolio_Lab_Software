@@ -9,9 +9,6 @@ const Navbar: FC = (): JSX.Element => {
     <nav className="navStyles">
       <div className="linksNavStyle">
         <div className="containerStyles">
-          <Link to="home" smooth={true} duration={500} offset={-70} className="linkStyles">
-            Jonathan Sena
-          </Link>
           <Link to="about" smooth={true} duration={500} offset={-70} className="linkStyles">
             About
           </Link>
