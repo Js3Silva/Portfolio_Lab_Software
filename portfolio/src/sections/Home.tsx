@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../assets/CSS/home.css";
+import "../assets/CSS/Home.css";
 import img from "../assets/astronauta.png";
 
 export default function Home() {
@@ -31,7 +31,6 @@ export default function Home() {
   return (
     <div className="home">
       <div className="home-content">
-        {/* Texto */}
         <div className="home-text">
           <h1 className="home-h1">{Name}</h1>
           <section className="home-description">

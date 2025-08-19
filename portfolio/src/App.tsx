@@ -1,23 +1,37 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './sections/Home';
-import About from './sections/About';
-import Projects from './sections/Projects';
-import Contact from './sections/Contact';
-import Navbar from './components/Navbar';
-import Experience from './sections/Experience';
+import { Element } from "react-scroll";
+import Navbar from "./components/Navbar";
+import Home from "./sections/Home";
+import About from "./sections/About";
+import Projects from "./sections/Projects";
+import Experience from "./sections/Experience";
+import Contact from "./sections/Contact";
+import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
-    <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/experience" element={<Experience />} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <Navbar />
+
+      <Element name="home" className="section">
+        <Home />
+      </Element>
+
+      <Element name="about" className="section">
+        <About />
+      </Element>
+
+      <Element name="projects" className="section">
+        <Projects />
+      </Element>
+
+      <Element name="experience" className="section">
+        <Experience />
+      </Element>
+
+      <Element name="contact" className="section">
+        <Contact />
+      </Element>
+    </div>
   );
 }
 

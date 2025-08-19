@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import type { JSX } from "react";
-import { Link } from "react-router-dom";
-import "../assets/CSS/Navbar.css"
+import { Link } from "react-scroll";
+import "../assets/CSS/Navbar.css";
 import perfilImg from "../assets/perfil.png"; 
 
 const Navbar: FC = (): JSX.Element => {
@@ -9,27 +9,25 @@ const Navbar: FC = (): JSX.Element => {
     <nav className="navStyles">
       <div className="linksNavStyle">
         <div className="containerStyles">
-          <Link to="/" className="linkStyles">
+          <Link to="home" smooth={true} duration={500} offset={-70} className="linkStyles">
             Jonathan Sena
           </Link>
-          <Link to="/about" className="linkStyles">
+          <Link to="about" smooth={true} duration={500} offset={-70} className="linkStyles">
             About
           </Link>
-          <Link to="/projects" className="linkStyles">
+          <Link to="projects" smooth={true} duration={500} offset={-70} className="linkStyles">
             Projects
           </Link>
-          <Link to="/contact" className="linkStyles">
+          <Link to="experience" smooth={true} duration={500} offset={-70} className="linkStyles">
             Experience
           </Link>
-          <Link to="/contact" className="linkStyles">
+          <Link to="contact" smooth={true} duration={500} offset={-70} className="linkStyles">
             Contact
           </Link>
         </div>
       </div>
-      <img className="imgStyles" src={perfilImg} alt="" />
+      <img className="imgStyles" src={perfilImg} alt="Perfil" />
     </nav>
-
-
   );
 };
 
