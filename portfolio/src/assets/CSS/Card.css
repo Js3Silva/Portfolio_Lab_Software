@@ -1,0 +1,85 @@
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+/* card continua como estava */
+.card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  min-height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer; 
+  background-color: #333;
+}
+
+.card-container:hover {
+  transform: scale(1.03);
+}
+
+.card-image-wrapper {
+  background-color: #2a2a2a;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.card-info {
+  width: 100%;
+  padding: 15px;
+  color: white;
+  text-align: center;
+}
+
+/* Texto que aparece ao lado */
+.card-click-text {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  margin-left: 0;
+  background: white;
+  color: #222;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Quando expandido, abre suave */
+.card-wrapper.expanded .card-click-text {
+  max-width: 250px;
+  opacity: 1;
+  margin-left: 20px;
+  padding: 20px;
+}
+
+/* Responsivo: no celular o texto vai para baixo */
+@media (max-width: 768px) {
+  .card-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .card-click-text {
+    max-width: 100% !important;
+    opacity: 1;
+    margin-left: 0;
+    margin-top: 10px;
+    padding: 15px;
+  }
+}
