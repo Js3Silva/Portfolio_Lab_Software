@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../assets/CSS/Home.css";
 import { GoChevronRight } from "react-icons/go";
-import img from "../assets/astronauta.png";
+import img from "../assets/images/astronauta.png";
 
 export default function Home() {
   const paragraphText = `Bem-vindo ao meu universo!
@@ -30,7 +30,7 @@ otimizam processos e impulsionam novas possibilidades.`;
     });
     if (currentLine.length) tempLines.push(currentLine);
     setLines(tempLines);
-  }, []);
+  }, [paragraphText]);
 
   return (
     <div className="home">

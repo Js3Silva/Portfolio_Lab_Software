@@ -5,6 +5,7 @@
   margin-right: 10vw;
   display: flex;
   align-items: center;
+  max-height: 80vh;
 }
 
 /* Divide texto e imagem lado a lado */
@@ -137,6 +138,11 @@
   }
 }
 
+.home-button-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 /* Botão */
 .home-button {
   background-color: #4c297700;

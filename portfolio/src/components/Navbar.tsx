@@ -2,7 +2,7 @@ import type { FC } from "react";
 import type { JSX } from "react";
 import { Link } from "react-scroll";
 import "../assets/CSS/Navbar.css";
-import perfilImg from "../assets/perfil.png"; 
+import perfilImg from "../assets/images/perfil.png"; 
 
 const Navbar: FC = (): JSX.Element => {
   return (

@@ -12,7 +12,6 @@ export default function Contacts() {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } else {
-      // fallback for unsupported browsers
       setCopied(false);
       alert("Clipboard API not supported in this browser.");
     }
@@ -27,7 +26,7 @@ export default function Contacts() {
           <FaLinkedin className="contact-icon linkedin" />
           <p>&lt;/Linkedin&gt;</p>
           <a
-            href="https://www.linkedin.com/in/jonathansilvagw"
+            href="https://www.linkedin.com/in/jonathan3sena/"
             target="_blank"
             rel="noreferrer"
           >
@@ -40,7 +39,7 @@ export default function Contacts() {
           <FaGithub className="contact-icon github" />
           <p>&lt;/GitHub&gt;</p>
           <a
-            href="https://github.com/jonathansilvagw"
+            href="https://github.com/Js3Silva"
             target="_blank"
             rel="noreferrer"
           >
