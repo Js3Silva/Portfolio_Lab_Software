@@ -1,5 +1,4 @@
-.about{ 
-    margin-top: 100px;
+.about { 
     text-align: center;
     padding: 0px 20px;
     color: white;
@@ -10,32 +9,65 @@
     align-items: center;
 }
 
-.about h1 {
-    font-size: 3rem;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
 .about-grid {
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     justify-content: space-around;
     gap: 50px;
     flex-wrap: wrap;
+    max-width: 1100px;
 }
 
 .about-image {
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 500px;
     object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(170, 100, 255, 0.7);
+    transition: transform 0.3s ease;
 }
 
-.about p {
-    font-size: 1.6rem;
-    margin-top: 2rem;
+.about-image:hover {
+    transform: scale(1.05);
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     max-width: 50ch;
-    line-height: 1.5;
-    text-decoration: solid;
+}
+
+/* Cada seção (EN/PT) */
+.about-section {
     text-align: justify;
     text-justify: inter-word;
+}
+
+.about-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #a463f2;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 90%;
+    }
+
+    .about-section {
+        text-align: center;
+    }
 }
