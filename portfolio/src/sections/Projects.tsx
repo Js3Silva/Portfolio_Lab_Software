@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../assets/CSS/Projects.css";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // setas modernas
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; 
 
 type Repo = {
   id: number;
