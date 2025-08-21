@@ -4,11 +4,10 @@ import { GoChevronRight } from "react-icons/go";
 import img from "../assets/images/astronauta.png";
 
 export default function Home() {
-  const paragraphText = `Bem-vindo ao meu universo!
-Sou apaixonado por tecnologia, inovação e pelo impacto que o código pode gerar no mundo real. 
+  const paragraphText = ` Sou apaixonado por tecnologia, inovação e pelo impacto que o código pode gerar no mundo real. 
 Minha missão é transformar ideias em soluções criativas, desenvolver projetos que conectam pessoas, 
 otimizam processos e impulsionam novas possibilidades.`;
-  const Name = "Olá! Eu sou o Jonathan \ne estou Graduando em Engenharia de Software";
+  const Name = "Bem-vindo ao meu universo! \n";
   const [lines, setLines] = useState<string[][]>([]);
 
   useEffect(() => {

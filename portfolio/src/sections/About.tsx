@@ -1,4 +1,5 @@
 import "../assets/CSS/About.css";
+import imagem from "../assets/images/eu.jpeg";
 
 export default function About() {
   return (
@@ -8,7 +9,7 @@ export default function About() {
       <div className="about-grid">
         <img
           className="about-image"
-          src="https://i.ibb.co/bRmB2Yt/IMG-20230426-WA0003.jpg"
+          src={imagem}
           alt="Foto de Jonathan Silva"
         />
 
