@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import "../assets/CSS/Home.css";
 import { GoChevronRight } from "react-icons/go";
 import img from "../assets/images/astronauta.png";
+import { Link } from "react-scroll";
 
 export default function Home() {
-  const paragraphText = ` Sou apaixonado por tecnologia, inovação e pelo impacto que o código pode gerar no mundo real. 
-Minha missão é transformar ideias em soluções criativas, desenvolver projetos que conectam pessoas, 
-otimizam processos e impulsionam novas possibilidades.`;
-  const Name = "Bem-vindo ao meu universo! \n";
+  const paragraphText = ` Sou apaixonado por tecnologia, inovação e pelo impacto que o código pode gerar no mundo real.`;
+  const Name = "Olá! Eu sou o Jonathan. \n";
   const [lines, setLines] = useState<string[][]>([]);
 
   useEffect(() => {
@@ -52,7 +51,8 @@ otimizam processos e impulsionam novas possibilidades.`;
             </p>
           </section>
           <section className="home-button-section">
-            <button className="home-button">Saber mais <GoChevronRight /></button>
+            <Link to="about" smooth={true} duration={500} offset={-70}>
+              <button className="home-button">Saber mais <GoChevronRight /></button> </Link>
           </section>
         </div>
 

@@ -3,6 +3,7 @@
   align-items: center;
   margin: 20px;
   transition: all 0.4s ease-in-out;
+  max-height: 250px;
 }
 
 /* card continua como estava */
@@ -11,7 +12,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
+  width: 280px; /* reduzi um pouco */
   min-height: 200px;
   border-radius: 10px;
   overflow: hidden;
@@ -26,16 +27,16 @@
 }
 
 .card-image-wrapper {
-  background-color: #2a2a2a;
+  background-color: #ffffff;
   width: 100%;
-  height: 150px;
+  height: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .card-image {
-  max-width: 90%;
+  max-width: 100%;
   max-height: 90%;
   object-fit: contain;
 }
@@ -45,6 +46,7 @@
   padding: 15px;
   color: white;
   text-align: center;
+  max-height: 220px;
 }
 
 /* Texto que aparece ao lado */
@@ -63,9 +65,40 @@
 /* Quando expandido, abre suave */
 .card-wrapper.expanded .card-click-text {
   max-width: 250px;
+  max-height: 220px; /* altura menor */
   opacity: 1;
   margin-left: 20px;
   padding: 20px;
+  overflow-y: auto; /* scroll interno */
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Barra de rolagem customizada */
+.card-wrapper.expanded .card-click-text::-webkit-scrollbar {
+  width: 6px;
+}
+.card-wrapper.expanded .card-click-text::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+.card-wrapper.expanded .card-click-text::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Estilo para tópicos */
+.card-wrapper.expanded .card-click-text p {
+  margin: 8px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.card-wrapper.expanded .card-click-text p::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2c3e50;
+  font-size: 12px;
 }
 
 /* Responsivo: no celular o texto vai para baixo */
@@ -73,6 +106,7 @@
   .card-wrapper {
     flex-direction: column;
     align-items: stretch;
+    max-height: none;
   }
 
   .card-click-text {
@@ -81,5 +115,6 @@
     margin-left: 0;
     margin-top: 10px;
     padding: 15px;
+    max-height: 200px;
   }
 }

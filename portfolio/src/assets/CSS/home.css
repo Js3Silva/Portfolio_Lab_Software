@@ -157,7 +157,7 @@
   transform: translateX(-100%);
   opacity: 0;
   animation: slideInLeft 1s ease-out forwards;
-  animation-delay: 9s; 
+  animation-delay: 4s; 
 }
 
 .home-button:hover {

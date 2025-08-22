@@ -29,8 +29,11 @@ const Card: React.FC<CardProps> = ({ imageSrc, altText, title, dateRange, hoverT
       </div>
 
       <div className="card-click-text">
-        <p>{hoverText}</p>
+        {hoverText.split("\n").map((line, i) => (
+          <p key={i}>{line}</p>
+        ))}
       </div>
+
     </div>
   );
 };
