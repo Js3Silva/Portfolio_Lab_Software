@@ -24,7 +24,7 @@ export default function Contacts() {
       error: "Erro ao enviar: ",
     },
     en: {
-      title: "Get in Touch",
+      title: "Contact Me",
       subtitle: "Let's connect 🚀",
       description: "I’m always open to new ideas, collaborations, and opportunities.",
       placeholders: {

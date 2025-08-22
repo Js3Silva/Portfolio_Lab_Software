@@ -31,7 +31,6 @@ export default function Projects() {
     fetch("https://api.github.com/users/Js3Silva/repos")
       .then((res) => res.json())
       .then((data) => {
-        // só pega repositórios com descrição
         setRepos(data.filter((r: Repo) => r.description));
       })
       .finally(() => setLoading(false));
