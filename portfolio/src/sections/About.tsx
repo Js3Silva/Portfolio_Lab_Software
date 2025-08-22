@@ -9,10 +9,10 @@ export default function About() {
     en: {
       title: "About Me",
       description: `
-I am pursuing a degree in Software Engineering at the Pontifical Catholic University of Minas Gerais and hold a technical degree in Electronics from CEFET-MG. I have always been an easygoing and curious person, passionate about programming and problem-solving.
-Much of my hands-on programming experience comes from university, and I am currently focused on deepening my knowledge in React for front-end and Java with Spring Boot for back-end, as well as using PostgreSQL as a database.
-At present, I work at Stellantis Automóveis Brasil in a hybrid model, in the ICT area, managing projects. Before that, I worked at Block Monitoramento, where, drawing on my electronics background, I configured vehicle tracking devices. This experience was essential, but I decided to migrate to the software field to better understand the “whys” behind solutions and also because I am a creative and motivated person, eager to innovate and structure ideas.
-My personal goals include improving my English and securing a Junior Developer position in the short term. In the long term, I aim to establish myself as a recognized professional in the technology field, making a significant contribution to the market with my learning and experiences.`,
+        I am pursuing a degree in Software Engineering at the Pontifical Catholic University of Minas Gerais and hold a technical degree in Electronics from CEFET-MG. I have always been an easygoing and curious person, passionate about programming and problem-solving.
+        Much of my hands-on programming experience comes from university, and I am currently focused on deepening my knowledge in React for front-end and Java with Spring Boot for back-end, as well as using PostgreSQL as a database.
+        At present, I work at Stellantis Automóveis Brasil in a hybrid model, in the ICT area, managing projects. Before that, I worked at Block Monitoramento, where, drawing on my electronics background, I configured vehicle tracking devices. This experience was essential, but I decided to migrate to the software field to better understand the “whys” behind solutions and also because I am a creative and motivated person, eager to innovate and structure ideas.
+        My personal goals include improving my English and securing a Junior Developer position in the short term. In the long term, I aim to establish myself as a recognized professional in the technology field, making a significant contribution to the market with my learning and experiences.`,
     },
     pt: {
       title: "Sobre Mim",
