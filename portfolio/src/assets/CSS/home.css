@@ -29,8 +29,29 @@
   margin-left: 50px;
   width: 500px;
   height: 500px;
-  object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease forwards, float 6s ease-in-out infinite;
+}
+
+/* Add missing keyframes for fadeIn and float */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 /* Títulos e parágrafos */

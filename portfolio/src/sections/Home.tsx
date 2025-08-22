@@ -3,10 +3,27 @@ import "../assets/CSS/Home.css";
 import { GoChevronRight } from "react-icons/go";
 import img from "../assets/images/astronauta.png";
 import { Link } from "react-scroll";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Home() {
-  const paragraphText = ` Sou apaixonado por tecnologia, inovação e pelo impacto que o código pode gerar no mundo real.`;
-  const Name = "Olá! Eu sou o Jonathan. \n";
+  const { language } = useLanguage();
+
+  const texts = {
+    pt: {
+      name: "Olá! Eu sou o Jonathan.\n",
+      paragraph: "Sou apaixonado por tecnologia, inovação e pelo impacto que o código pode gerar no mundo real.",
+      button: "Saber mais",
+    },
+    en: {
+      name: "Hi! I'm Jonathan.\n",
+      paragraph: "I am passionate about technology, innovation, and the impact that code can create in the real world.",
+      button: "Learn more",
+    },
+  };
+
+  const paragraphText = texts[language].paragraph;
+  const Name = texts[language].name;
+
   const [lines, setLines] = useState<string[][]>([]);
 
   useEffect(() => {
@@ -52,7 +69,10 @@ export default function Home() {
           </section>
           <section className="home-button-section">
             <Link to="about" smooth={true} duration={500} offset={-70}>
-              <button className="home-button">Saber mais <GoChevronRight /></button> </Link>
+              <button className="home-button">
+                {texts[language].button} <GoChevronRight />
+              </button>
+            </Link>
           </section>
         </div>
 

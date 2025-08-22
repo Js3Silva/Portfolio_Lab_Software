@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../assets/CSS/Projects.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; 
+import { useLanguage } from "../context/LanguageContext";
 
 type Repo = {
   id: number;
@@ -11,25 +12,38 @@ type Repo = {
 };
 
 export default function Projects() {
+  const { language } = useLanguage();
   const [repos, setRepos] = useState<Repo[]>([]);
   const [loading, setLoading] = useState(true);
+
+  const texts = {
+    en: {
+      title: "My Projects",
+      loading: "Loading projects...",
+    },
+    pt: {
+      title: "Meus Projetos",
+      loading: "Carregando projetos...",
+    },
+  };
 
   useEffect(() => {
     fetch("https://api.github.com/users/Js3Silva/repos")
       .then((res) => res.json())
       .then((data) => {
+        // só pega repositórios com descrição
         setRepos(data.filter((r: Repo) => r.description));
       })
       .finally(() => setLoading(false));
   }, []);
 
   if (loading) {
-    return <h2 style={{ textAlign: "center" }}>Carregando projetos...</h2>;
+    return <h2 style={{ textAlign: "center" }}>{texts[language].loading}</h2>;
   }
 
   return (
     <div className="projects">
-      <h1 className="projects-title">My Projects</h1>
+      <h1 className="projects-title">{texts[language].title}</h1>
       <div className="carousel">
         {/* Botão Prev */}
         <button

@@ -5,11 +5,12 @@ import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
+import { LanguageProvider } from "./context/LanguageContext"; // importa o contexto
 import "./App.css";
 
 function App() {
   return (
-    <div>
+    <LanguageProvider>
       <Navbar />
 
       <Element name="home" className="section">
@@ -31,7 +32,7 @@ function App() {
       <Element name="contact" className="section">
         <Contact />
       </Element>
-    </div>
+    </LanguageProvider>
   );
 }
 

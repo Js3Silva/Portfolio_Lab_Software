@@ -16,6 +16,7 @@
   display: flex;
   border-radius: 10px;
   margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .containerStyles {
@@ -29,15 +30,40 @@
 .linkStyles {
   font-size: 1.125rem;
   font-weight: bold;
-  color: gray;
+  color: gray !important; 
   text-decoration: none;
   margin-right: 1.5rem;
   cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.imgStyles{
-    height: 100px;
-    width: 100px;
-    border-radius: 100px;
+.linkStyles:hover {
+  color: #f0a500; 
+  transform: scale(1.05);
 }
 
+.imgStyles {
+  height: 80px; 
+  width: 80px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: transform 0.3s ease;
+}
+
+.imgStyles:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo para bandeiras */
+.linksNavStyle img {
+  width: 0px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.linksNavStyle img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px #ffffff;
+}

@@ -1,4 +1,4 @@
-.about { 
+.about-section { 
     text-align: center;
     padding: 0px 20px;
     color: white;
@@ -38,21 +38,11 @@
     max-width: 50ch;
 }
 
-/* Cada seção (EN/PT) */
-.about-section {
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-.about-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #a463f2;
-}
-
 .about-section p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.6;
+    text-align: justify;
+    color: #ffffff;
 }
 
 /* Responsividade */
