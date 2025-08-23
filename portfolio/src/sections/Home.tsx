@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../../assets/CSS/Home.css";
+import "../assets/CSS/Home.css";
 import { GoChevronRight } from "react-icons/go";
 import img from "../assets/images/astronauta.png";
 import { Link } from "react-scroll";
