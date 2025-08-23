@@ -1,8 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap");
-
 /* Container principal */
 .home {
-    margin-top: 50px;
+  margin-top: 50px;
   margin-right: 10vw;
   display: flex;
   align-items: center;
@@ -32,7 +30,6 @@
   animation: fadeIn 1s ease forwards, float 6s ease-in-out infinite;
 }
 
-/* Add missing keyframes for fadeIn and float */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -54,15 +51,10 @@
   }
 }
 
-/* Títulos e parágrafos */
-.home-h1,
-.home-description p {
-  font-family: "Raleway", sans-serif;
-}
-
 /* Títulos */
 .home-h1 {
-  font-size: 3rem;
+  font-family: "Orbitron", sans-serif;;
+  font-size: 2.5rem;
   text-align: left;
   text-wrap: balance;
   margin-bottom: 2rem;
@@ -95,6 +87,9 @@
   margin-top: 2rem;
   max-width: 50ch;
   line-height: 1.5;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .line {
@@ -179,6 +174,9 @@
   opacity: 0;
   animation: slideInLeft 1s ease-out forwards;
   animation-delay: 4s; 
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .home-button:hover {

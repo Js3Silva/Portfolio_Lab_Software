@@ -18,10 +18,10 @@ const Navbar: FC = () => {
     <nav className="navStyles">
       <div className="linksNavStyle">
         <div className="containerStyles">
-          <Link style={{ color: "white", cursor: "pointer", fontSize: "1.2rem", fontFamily: "Roboto, sans-serif" }} to="about" smooth={true} duration={500} offset={-70}>{labels[language].about}</Link>
-          <Link style={{ color: "white", cursor: "pointer", fontSize: "1.2rem", fontFamily: "Roboto, sans-serif" }} to="projects" smooth={true} duration={500} offset={-70}>{labels[language].projects}</Link>
-          <Link style={{ color: "white", cursor: "pointer", fontSize: "1.2rem", fontFamily: "Roboto, sans-serif" }} to="experience" smooth={true} duration={500} offset={-70}>{labels[language].experience}</Link>
-          <Link style={{ color: "white", cursor: "pointer", fontSize: "1.2rem", fontFamily: "Roboto, sans-serif" }} to="contact" smooth={true} duration={500} offset={-70}>{labels[language].contact}</Link>
+          <Link style={{ color: "white", cursor: "pointer", fontSize: "1.2rem", fontFamily: "IBM Plex Mono, monospace", fontWeight: "800" }} to="about" smooth={true} duration={500} offset={-70}>{labels[language].about}</Link>
+          <Link style={{ color: "white", cursor: "pointer", fontSize: "1.2rem", fontFamily: "IBM Plex Mono, monospace", fontWeight: "800" }} to="projects" smooth={true} duration={500} offset={-70}>{labels[language].projects}</Link>
+          <Link style={{ color: "white", cursor: "pointer", fontSize: "1.2rem", fontFamily: "IBM Plex Mono, monospace", fontWeight: "800" }} to="experience" smooth={true} duration={500} offset={-70}>{labels[language].experience}</Link>
+          <Link style={{ color: "white", cursor: "pointer", fontSize: "1.2rem", fontFamily: "IBM Plex Mono, monospace", fontWeight: "800" }} to="contact" smooth={true} duration={500} offset={-70}>{labels[language].contact}</Link>
         </div>
       </div>
       <div style={{ marginLeft: "20px", display: "flex", gap: "10px" }}>

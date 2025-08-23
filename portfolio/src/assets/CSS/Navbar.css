@@ -67,3 +67,20 @@
   transform: scale(1.2);
   box-shadow: 0 0 10px #ffffff;
 }
+
+@media screen and (max-width: 768px) {
+  .navStyles {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .linksNavStyle {
+    width: 100%;
+  }
+
+  .linkStyles {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+}
