@@ -129,20 +129,105 @@
   font-style: italic;
 }
 
-/* Responsividade */
-@media (max-width: 900px) {
+/* =================== RESPONSIVIDADE =================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
   .contact-card.big.two-columns {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 30px;
+    padding: 40px 30px;
+    width: 95%;
   }
 
   .contact-left {
     text-align: center;
-    margin-bottom: 30px;
+    align-items: center;
+  }
+
+  .contact-left h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-left p {
+    font-size: 1rem;
+    margin-bottom: 20px;
   }
 
   .social-icons {
     justify-content: center;
   }
+
+  .contact-right {
+    width: 100%;
+  }
 }
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+  .contacts {
+    padding: 15px;
+  }
+
+  .contact-card.big.two-columns {
+    padding: 30px 20px;
+    gap: 25px;
+  }
+
+  .contact-left h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-left p {
+    font-size: 0.95rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  .contact-btn {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .contact-card.big.two-columns {
+    padding: 20px 15px;
+    gap: 20px;
+  }
+
+  .contact-left h2 {
+    font-size: 1.4rem;
+  }
+
+  .contact-left p {
+    font-size: 0.85rem;
+  }
+
+  .social {
+    font-size: 2rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .contact-btn {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+
+  .form-status {
+    font-size: 0.85rem;
+  }
+}
+
