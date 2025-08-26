@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../assets/CSS/Projects.css";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; 
+import { FaChevronLeft, FaChevronRight, FaGithub } from "react-icons/fa"; 
 import { useLanguage } from "../context/LanguageContext";
 
 type Repo = {
@@ -49,7 +49,7 @@ export default function Projects() {
           className="carousel-btn prev"
           onClick={() =>
             document.querySelector(".carousel-track")?.scrollBy({
-              left: -300,
+              left: -320,
               behavior: "smooth",
             })
           }
@@ -67,7 +67,15 @@ export default function Projects() {
               rel="noopener noreferrer"
               className="project-card"
             >
+              {/* Logo GitHub */}
+              <div className="project-logo">
+                <FaGithub />
+              </div>
+
+              {/* Título */}
               <h2 className="project-title">{repo.name}</h2>
+
+              {/* Descrição */}
               <p className="project-description">{repo.description}</p>
             </a>
           ))}
@@ -78,7 +86,7 @@ export default function Projects() {
           className="carousel-btn next"
           onClick={() =>
             document.querySelector(".carousel-track")?.scrollBy({
-              left: 300,
+              left: 320,
               behavior: "smooth",
             })
           }
