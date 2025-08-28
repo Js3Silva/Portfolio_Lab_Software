@@ -7,8 +7,9 @@
 
 body {
   background-image: url("./assets/images/backgroud.jpg");
-  background-size: cover;
   background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   padding: 2rem;
   min-height: 100vh;
   display: flex;
@@ -63,4 +64,23 @@ footer {
   font-family: "Orbitron", sans-serif;
   font-weight: 200;
   font-style: normal;
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 1024px) {
+  body {
+    background-size: contain; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-size: 150%; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-size: 200%; 
+  }
 }
