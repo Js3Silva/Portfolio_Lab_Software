@@ -28,12 +28,12 @@ markdown
 ````
 src/
 ├─ assets/        → imagens, ícones e arquivos estáticos
-├─ components/    → componentes reutilizáveis (Navbar, Footer, Buttons)
-├─ sections/      → seções principais do site (Home, About, Projects, Contact)
-├─ styles/        → configurações e estilos globais
+├─ assets/CSS/    → estilização
+├─ components/    → componentes reutilizáveis (Navbar, Cards)
+├─ sections/      → seções principais do site (Home, About, Projects, Experience, Contact)
 ├─ App.tsx        → ponto principal da aplicação
 ├─ main.tsx       → renderização principal
-└─ index.css      → configuração do Tailwind CSS
+└─ index.css      → estilização global
 
 ````
 
@@ -41,7 +41,7 @@ src/
 
 1. **Clonar o repositório**
 ```bash
-git clone https://github.com/SEU_USUARIO/Portfolio_Lab_Software.git
+git clone https://github.com/Js3Silva/Portfolio_Lab_Software.git
 cd Portfolio_Lab_Software
 ````
 
@@ -70,3 +70,10 @@ http://localhost:5173
 ![Experience](./Figma/Experience.png)
 ![Projects](./Figma/Projects.png)
 
+## 🌐 Link Portfólio 
+
+````
+https://jonathansena.vercel.app/
+````
+
+![Gif](./Figma/portfolio.gif)
