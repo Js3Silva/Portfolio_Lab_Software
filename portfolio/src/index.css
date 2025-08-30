@@ -84,3 +84,31 @@ footer {
     background-size: 200%; 
   }
 }
+
+/* Cursor personalizado */
+body {
+  cursor: url('https://cur.cursors-4u.net/cursors/cur-2/cur116.cur'), auto; 
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #a64eff, #6a0dad); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #c77dff, #7b2cbf); 
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #a64eff #1a1a1a;
+}
